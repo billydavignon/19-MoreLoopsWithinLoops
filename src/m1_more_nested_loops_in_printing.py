@@ -4,8 +4,8 @@ in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Billy Davignon.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -54,7 +54,19 @@ def triangle_right_justified(r):
        12345
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
+
+    for k in range(r - 1, -1, -1):
+        a = '*' * (k)
+        b = ''
+        for l in range(k):
+            b = b + str(l + 1)
+            print(a + b)
     """
+    a = ''
+    for k in range(1, r):
+        b1 = '*' * ((r + 1) - (k + 1))
+        a = a + str(k)
+        print(b1 + a)
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Some tests are already written for you (above).
