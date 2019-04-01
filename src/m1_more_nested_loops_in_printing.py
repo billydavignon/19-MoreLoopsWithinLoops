@@ -54,21 +54,15 @@ def triangle_right_justified(r):
        12345
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
-
-    for k in range(r - 1, -1, -1):
-        a = '*' * (k)
-        b = ''
-        for l in range(k):
-            b = b + str(l + 1)
-            print(a + b)
     """
-    a = ''
-    for k in range(1, r):
-        b1 = '*' * ((r + 1) - (k + 1))
-        a = a + str(k)
-        print(b1 + a)
+    for k in range(r):
+        for j in range(r - k):
+            print(' ', end='')
+        for i in range(k + 1):
+            print(i + 1, end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -121,8 +115,14 @@ def triangle_upside_down(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for k in range(r):
+        for j in range(k):
+            print(' ', end='')
+        for i in range(r - k):
+            print(i + 1, end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -172,8 +172,18 @@ def vee(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for k in range(r):
+        for j in range(k):
+            print(' ', end='')
+        for i in range(r - k):
+            print(i + 1, end='')
+        for m in range(1):
+            print('-', end='')
+        for n in range(r - k):
+            print(n + 1, end='')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -228,8 +238,12 @@ def numbers_constant_forward(r, maxnum, n):
 
     Preconditions:  r, maxnum and n are positive integers.
     """
+    for k in range(r):
+        for j in range(maxnum):
+            print(str(j + 1) * n, end=' ')
+        print()
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
