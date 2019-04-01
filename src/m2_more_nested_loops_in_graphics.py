@@ -62,7 +62,7 @@ def draw_upside_down_wall(rectangle, n, window):
 
 
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     Some tests are already written for you (above).
     # -------------------------------------------------------------------------
 
